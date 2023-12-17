@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { CountCom } from './components/CountCom';
 
 function App() {
-  return (
-    <div>
-     <h1>App.tsx</h1>
-    </div>
-  );
+    const [num, setNum] = useState<number>(0);
+    return (
+        <div>
+            <CountCom num={num} onChange={(n) => setNum(n)} />
+        </div>
+    );
 }
 
 export default App;
