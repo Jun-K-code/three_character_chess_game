@@ -1,19 +1,23 @@
-import React, { useState } from 'react';
-import { ChessCom } from './components/ChessCom/ChessCom';
-import { ChessType } from './types/enums';
+import React from 'react';
 
+import { ChessType } from './types/enums';
+import { BoardCom } from './components/BoardCom';
+
+const chesses: ChessType[] = [
+    ChessType.black,
+    ChessType.red,
+    ChessType.none,
+    ChessType.none,
+    ChessType.black,
+    ChessType.red,
+    ChessType.black,
+    ChessType.red,
+    ChessType.black,
+];
 function App() {
     return (
         <div>
-            <ChessCom type={ChessType.none} onClick={() => {
-                console.log("被点击了")
-            }}/>
-            <ChessCom type={ChessType.red} onClick={() => {
-                console.log("被点击了")
-            }}/>
-            <ChessCom type={ChessType.black} onClick={() => {
-                console.log("被点击了")
-            }}/>
+            <BoardCom chesses={chesses} isGameOver={true} onClick={(i) => console.log(i)} />
         </div>
     );
 }

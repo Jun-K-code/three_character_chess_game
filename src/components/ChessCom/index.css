@@ -1,7 +1,9 @@
 .chess {
     width: 50px;
     height: 50px;
-    border: 2px solid lightgray;
+    /* border: 2px solid lightgray; */ /* 占据空间 */
+    /* box-sizing: border-box; */
+    outline: 2px solid lightgray; /* 不占据空间 */
     display: flex;
     justify-content: center;
     align-items: center;
