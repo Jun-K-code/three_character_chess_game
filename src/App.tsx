@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
-import { CountCom } from './components/CountCom';
+import { ChessCom } from './components/ChessCom/ChessCom';
+import { ChessType } from './types/enums';
 
 function App() {
-    const [num, setNum] = useState<number>(0);
     return (
         <div>
-            <CountCom num={num} onChange={(n) => setNum(n)} />
+            <ChessCom type={ChessType.none} onClick={() => {
+                console.log("被点击了")
+            }}/>
+            <ChessCom type={ChessType.red} onClick={() => {
+                console.log("被点击了")
+            }}/>
+            <ChessCom type={ChessType.black} onClick={() => {
+                console.log("被点击了")
+            }}/>
         </div>
     );
 }
